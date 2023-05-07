@@ -1,7 +1,4 @@
-// require('dotenv').config();
-
-const publicVapidKey = "BKaTeaA-m9xZnSczAGGKGLMoWPbL_nAZmVY75c-dke2HdvKgyyUVHlDgTVwVn5cHyNWF5PWE-AXZ_mm7Ca6altc";
-
+const publicVapidKey = process.env.PUBLIC_VAPID_KEY;
 // check for service worker
 if ('serviceWorker' in navigator) {
     send().catch(err => console.error(err));
