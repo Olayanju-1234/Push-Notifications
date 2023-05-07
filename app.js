@@ -1,11 +1,15 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+const morgan = require('morgan');
 
 // Route
 const subscribeRoute = require('./routes/subscribe');
 
 const app = express();
+
+// logger
+app.use(morgan('dev'));
 
 // set static path
 app.use(express.static(path.join(__dirname, 'client')));
